@@ -1,0 +1,58 @@
+/*Menu*/
+nav{
+  text-align: right;
+  padding: 30px 50px 0 0;
+}
+
+nav > a{
+  color:#fff;
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 10px;
+}
+/*Decoracion cuando pasamos el mause*/
+nav > a:hover{
+  text-decoration: underline;
+}
+body {
+  background-color: black;
+}
+
+#coche{
+  transform:translate(200px, 310px);
+}
+
+#arbol{
+  transform: translateX(800px) scale(0.54);
+  animation: animacionArbol 4s linear infinite;
+}
+
+@keyframes animacionArbol{
+  to{
+    transform: translateX(-800px) scale(0.54);
+  }
+}
+
+#ruedas{
+  animation: rotate-out 1s linear infinite;
+  transform-origin:center;
+}
+
+@keyframes rotate-out{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(180deg)
+  }
+}
+
+#lineas{
+  animation: animacionLineas 4s linear infinite;
+}
+
+@keyframes animacionLineas{
+  to{
+    transform: translateX(-800px);
+  }
+}

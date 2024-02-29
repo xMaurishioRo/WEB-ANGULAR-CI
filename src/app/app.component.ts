@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -9,5 +10,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'todoapp';
+  title = 'todo-app';
+  welcome = 'Bienvenido a mi primera aplicacion con Angular';
+  tasks = [
+    'Instalar Angular CLI',
+    'Crear proyecto',
+    'Crear componente',
+    'Crear servicio'
+  ];
 }

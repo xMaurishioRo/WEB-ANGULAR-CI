@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- iconos de key frame  -->
+    <script src="https://kit.fontawesome.com/9b97a36897.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        
+        <div class="contenedor">
+            <div class="formulario">
+                <form  (ngSubmit)="submitLoginForm($event)" #loginForm="ngForm">
+                    <h2>Sign up</h2>
+                    <div class="input-contenedor">
+                        
+                        <input type="text" id="nameField" required [(ngModel)]="name" name="name">
+                        <label for="nameField">Name</label>
+                    </div>
+                    <div class="input-contenedor">
+                        
+                        <input type="text" id="lastNameField" required [(ngModel)]="lastName" name="lastName">
+                        <label class="otro" for="lastNameField">Last Name</label>
+                    </div>
+                    <div class="input-contenedor">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="text" id="emailField" required [(ngModel)]="email" name="email" #emailField="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <label for="emailField">Email</label>
+                        <div *ngIf="emailField.invalid && (emailField.dirty || emailField.touched)" class="error-email" [class.vibrate-animation]="invalidCorreo" style="color: #fff;">El correo electrónico no es válido.</div>
+                    </div>
+                    <div class="input-contenedor">
+                        <input type="text" id="telefonoField" required [(ngModel)]="telefono" name="telefono" #telefonoField = "ngModel" pattern="[0-9]{10}">
+                        <label for="telefonoField">Teléfono</label>
+                        <span *ngIf="telefonoField.invalid && (telefonoField.dirty || telefonoField.touched)" class="error-telefono" [class.vibrate-animation]="invalidTelefono" style="color: #fff;">El teléfono debe tener 10 dígitos.</span>
+                    </div>
+                    
+                    
+                    <div class="input-contenedor">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="passwordField" required [(ngModel)]="password" name="contrasena">
+
+                        <label  for="passwordField">Contraseña</label>
+                        
+                    </div>
+                    <div class="input-contenedor">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="cpasswordField" required [(ngModel)]="cpassword" name="Ccontrasena">
+
+                        <label  for="cpasswordField">Confirmar Contraseña</label>
+                        
+                    </div>
+                    
+                    <div class="olvidar">
+                        <!-- <label>
+                          <input type="checkbox"> Recordar
+                          <a href="#">Olvidé mi contrasña</a>
+                        </label> -->
+                    </div>
+                    <div class="login-box" *ngIf="!loading">
+                        <div class="link-container">
+                            <a (click)="submitLoginForm($event)" href="#" (click)="scrollToError()"> 
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                {{ error ? 'Error' : 'Sopas' }}
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="loading-animation" *ngIf="loading">
+                        <div class="spinner"></div>
+                        <p style="color: #fff;">Cargando...</p>
+                    </div>
+                    
+                    
+                    
+                    
+                </form>
+                <div class="registar">
+                    <br><br>
+                    <p>tengo cuenta <a href="#">Sign</a></p>
+                </div>
+                <div style="text-align: center;" *ngIf="emptyFieldsError" class="error-message" [class.vibrate-animation]="emptyFieldsError">
+                    Por favor, completa todos los campos.
+                </div>
+                <div style="text-align: center;" *ngIf="incorrectPassword" class="error-message" [class.vibrate-animation]="incorrectPassword">
+                    La contraseña que has introducido es incorrecta. ¿Has olvidado tu contraseña?
+                </div>
+                <div style="text-align: center;" *ngIf="metooPassword" class="error-message" [class.vibrate-animation]="metooPassword">
+                    Las contraseñas no coinciden pendejo
+                </div>
+                <div style="text-align: center;" *ngIf="invalidEmail" class="error-message" [class.vibrate-animation]="invalidEmail">
+                    Correo o teléfono ya registrados.
+                </div>
+            </div>
+        </div>
+        <router-outlet></router-outlet>
+    </section>
+    <!-- <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
+            
+            // Obtiene los valores de los campos de entrada
+            var email = document.getElementById("emailField").value;
+            var password = document.getElementById("passwordField").value;
+            
+            // Imprime los valores en la consola del navegador
+            console.log("Email: ", email);
+            console.log("Contraseña: ", password);
+            
+            // Puedes realizar otras acciones con estos valores aquí, como enviarlos a un servidor, etc.
+        });
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,344 @@
+*{
+    font-family: 'poppins';
+    margin: 0;
+    padding: 0;
+}
+.error-message{
+  color:#fff;
+  width: 300px;
+  height: 0px;
+  boldfont-family: bold;
+}
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(2px); }
+}
+
+@keyframes vibrate-animation {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(2px); }
+}
+
+.vibrate-animation {
+  animation: vibrate 0.3s 1.5;}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height:100vh ;
+    /* background :url(https://e1.pxfuel.com/desktop-wallpaper/316/266/desktop-wallpaper-fondo-de-pantalla-anime-dark-hq-1280x800-for-your-mobile-tablet-anime-girl-dark.jpg)no-repeat ; */
+    /* background :url(../img/IMG-20230225-WA0014.jpg)no-repeat ; */
+    /* background :url(../img/ed786b4d5ab1b788c4ded1158f8dee43.jpg)no-repeat ;  */
+    background :url(../img/coche.avif);
+    background-position:center;
+    background-size: cover;
+
+}
+
+.contenedor{
+    position: relative;
+    width: 400px;
+    border: 2px solid rgba(255, 255, 255,.6);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor h2{
+    font-size: 2.3rem;
+    color: #fff;
+    text-align: center;
+}
+
+.input-contenedor{
+    position: relative;
+    margin: 30px 0;
+    width:300px ;
+    border-bottom:2px solid #fff ;
+}
+
+.input-contenedor label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translate(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .6s;
+    font-family: bold;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+
+.input-contenedor input{
+    width:100% ;
+    height: 50px;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    font-family: 1rem;
+    padding: - 35px 0 5px;
+    color: #fff;
+}
+.input-contenedor i{
+    position: absolute;
+    color: #fff;
+    font-size: 1.6rem;
+    top: 19px;
+    right: 8px;
+}
+
+.olvidar {
+    margin: -15px 0 15px;
+    font-size: .9rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.olvidar label input{
+    margin: 3px;
+}
+.olvidar label a{
+    color:#fff;
+    text-decoration: none;
+    transition: .3s;
+    font-size: .9em;
+}
+.olvidar label a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background:#fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transition: .4s;
+    color: #000;
+}
+button:hover{
+    opacity: .9;
+}
+.registar{
+    font-size: .8rem;
+    color:#fff;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+.registar p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.registar p a:hover{
+    text-decoration: underline;
+}
+
+
+
+.login-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 400px;
+    padding: 5px;
+    transform: translate(-50%, -50%);
+    /* background: rgba(0,0,0,.5); */
+    box-sizing: border-box;
+    /* box-shadow: 0 15px 25px rgba(0,0,0,.6); */
+    border-radius: 10px;
+  }
+  .loading-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+  .login-box  a {
+
+
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    /* margin-top: 40px; */
+    letter-spacing: 4px
+  }
+
+  .login-box a:hover {
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #3a3636,
+                0 0 25px #3a3636,
+                0 0 50px #3a3636,
+                0 0 100px #3a3636;
+  }
+
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff);
+    animation: btn-anim1 1s linear infinite;
+  }
+
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #fff);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #fff);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #fff);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  .login-box a:hover span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff);
+    animation: btn-anim1 0.5s linear infinite;
+    animation-delay: .5s
+  }
+.login-box a:hover span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #fff);
+    animation: btn-anim2 0.5s linear infinite;
+    animation-delay: .125s
+
+}
+.login-box a:hover span:nth-child(3){
+
+  bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #fff);
+    animation: btn-anim3 0.5s linear infinite;
+    animation-delay: .25s
+}
+.login-box a:hover span:nth-child(4) {
+
+  bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #fff);
+    animation: btn-anim4 0.5s linear infinite;
+    animation-delay: .375s
+}
+/* animation-delay: . 0.5s */
+
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }

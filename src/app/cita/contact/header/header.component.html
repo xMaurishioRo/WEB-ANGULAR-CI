@@ -1,0 +1,49 @@
+<!--
+<header>
+  <h1>ELMER'S CAR<br>HIGH QUALITY SERVICE</h1>
+  <h2>Elmer's Car - Taller Mecánico ...</h2>
+  <p>C. 22 230 - x 27 y 29 Sobre avenida 22,<br>Col. México, México Oriente, 97125<br>Mérida, Yuc.</p>
+</header>
+-->
+
+<!-- header.component.html -->
+<header>
+  <h1>ELMER'S CAR<br>HIGH QUALITY SERVICE</h1>
+  <h2>Elmer's Car - Taller Mecánico ...</h2>
+  <p>C. 22 230 - x 27 y 29 Sobre avenida 22,<br>Col. México, México Oriente, 97125<br>Mérida, Yuc.</p>
+</header>
+
+<!-- reviews.component.html -->
+<section id="reviews">
+  <h3>4.4 ***** 77 opiniones</h3>
+  <!-- Agrega el sistema de revisiones Angular aquí -->
+</section>
+
+<!-- map.component.html -->
+<section id="map">
+  <h3>Ver mapa más grande</h3>
+  <!-- Agregar el componente de mapa Angular aquíiiiiiii -->
+</section>
+
+<!-- services.component.html -->
+<section id="services">
+  <h3>SERVICIOS</h3>
+  <p>C. 20 C. 25 SAN NICOLÁS NTE C SERVICIOS 44</p>
+  <!-- Agrega tu lista de servicios Angular aquí -->
+</section>
+
+<!-- contact.component.html -->
+<section id="contact">
+  <h3>CONTACTO</h3>
+  <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+      <label for="name">Nombre:</label><br>
+      <input type="text" id="name" name="name" ngModel required><br>
+      <label for="phone">Teléfono:</label><br>
+      <input type="tel" id="phone" name="phone" ngModel required><br>
+      <label for="email">Correo electrónico:</label><br>
+      <input type="email" id="email" name="email" ngModel required><br>
+      <label for="message">Mensaje:</label><br>
+      <textarea id="message" name="message" ngModel required></textarea><br>
+      <input type="submit" value="ENVIAR UN MENSAJE" [disabled]="!contactForm.valid">
+  </form>
+</section>
