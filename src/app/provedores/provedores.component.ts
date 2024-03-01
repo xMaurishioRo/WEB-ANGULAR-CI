@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './provedores.component.css'
 })
 export class ProvedoresComponent {
-
 }

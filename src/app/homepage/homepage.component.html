@@ -1,234 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homepage.component.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
 
- <body>
+  <!-- ********************************************************************* -->
+  <!-- ******************************* Menu ******************************** -->
+  <nav>
+    <a href="home">Inicio</a>
+    <a href="inventario">Inventario</a>
+    <a href="pro">Proveedores</a>
+    <a href="tra">Trabajadores</a>
+    <a href="buscar">Nosotros</a>
+    <div class="animation start-home"></div>
+  </nav>
+  <!-- ********************************************************************* -->
 
-<div class="menu-btn">
-
-    <i class="fas fa-bars fa-2x"></i>
-  </div>
-
+  <!-- ********************************************************************* -->
+  <!-- ************************* Citas Pendientes ************************** -->
   <div class="container">
-    <!-- Nav -->
+    <h2>Citas Pendientes</h2>
+    <!-- ************************************** -->
+    <!-- ************ Opcion Estado *********** -->
+    <form class="navbar-form navbar-left" role="search">
+      <select class="form-control1">
+        <option>Estado</option>
+        <option>Cancelado</option>
+        <option>En espera</option>
+        <option>Realizada</option>
+      </select>
+    </form>
+    <!-- ************************************** -->
+    <table class="table">
+      <!-- ************************************** -->
+      <!-- ************** Opciones ************** -->
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>FECHA</th>
+          <th>HORA</th>
+          <th>ESTADO</th>
+          <th>USUARIO</th>
+          <th>PLACAS</th>
+        </tr>
+      </thead>
+      <!-- ************************************** -->
+      <tbody>
+        <!-- ************************************** -->
+        <!-- ******** Opciones respuesta 1 ******** -->
+        <tr>
+          <td>1</td>
+          <td>19/03/2024</td>
+          <td>3:00 PM</td>
+          <td><select class="form-control">
+              <option>Realizada</option>
+              <!-- <option>En espera</option>
+              <option>Cancelada</option> -->
+            </select></td>
+          <td>Anthony Misael</td>
+          <td>YZ-3054-R</td>
+        </tr>
+        <!-- ************************************** -->
 
+        <!-- ************************************** -->
+        <!-- ******** Opciones respuesta 2 ******** -->
+        <tr>
+          <td>2</td>
+          <td>20/03/2024</td>
+          <td>5:00 PM</td>
+          <td><select class="form-control">
+              <!-- <option>Realizada</option> -->
+              <option>En espera</option>
+              <!-- <option>Cancelada</option> -->
+            </select></td>
+          <td>Balam Cetina</td>
+          <td>JK-6452-L</td>
+        </tr>
+        <!-- ************************************** -->
 
- <!-- Nav -->
- <nav class="main-nav">
-  <h1 class="loo">AutoSolution</h1>
-
-  <!-- <img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo"> -->
-
-  <ul class="main-menu">
-    <li><a class="u" href="home">home</a></li>
-    <li><a class="u" href="servicess">services</a></li>
-    <li><a class="u" href="pro">Provedores</a></li>
-    <li><a class="u" href="agenda">Agendas</a></li>
-    <li><a class="u" href="tra">trabajadores</a></li>
-    <li><a class="u" href="buscar">tareas</a></li>
-
-  </ul>
-
-  <ul class="right-menu">
-    <li>
-      <a href="#">
-        <i class="fas fa-search"></i>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fas fa-shopping-cart"></i>
-      </a>
-    </li>
-  </ul>
-</nav>
-
-    <!-- Showcase -->
-    <header class="showcase">
-      <h2>Surface Deals</h2>
-      <p>
-        Select Surfaces are on sale now - save while supplies last
-      </p>
-      <a href="#" class="btn">
-        Checar  inventario <i class="fas fa-chevron-right"></i>
-      </a>
-    </header>
-
-    <!-- Home cards 1 -->
-    <section class="home-cards">
-      <div>
-        <img [src]="runrun" alt="">
-        <h3>Section 1</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nesciunt perspiciatis nihil eligendi dolorem quod blanditiis quam, consectetur deserunt et ea impedit harum doloribus debitis. Sed voluptatem placeat veritatis mollitia?
-        </p>
-        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div>
-        <img [src]="runrun" alt="" />
-        <h3>Section 2</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, porro sed. Nihil optio similique quos asperiores modi voluptatem maiores ea ullam ratione totam harum nemo, tempora ut ipsa quisquam eum?
-        </p>
-        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div>
-        <img [src]="runrun" alt="" />
-        <h3>Section 3</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, porro sed. Nihil optio similique quos asperiores modi voluptatem maiores ea ullam ratione totam harum nemo, tempora ut ipsa quisquam eum?
-        </p>
-        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div>
-        <img [src]="runrun" alt="" />
-        <h3>Section 4</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, porro sed. Nihil optio similique quos asperiores modi voluptatem maiores ea ullam ratione totam harum nemo, tempora ut ipsa quisquam eum?
-        </p>
-        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
-    </section>
-
-    <!-- Xbox -->
-    <section class="xbox">
-      <div class="content">
-        <h2 style="color: #fff;"  >Nav / nse</h2>
-        <p style="color: #fff;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ipsam maxime enim nulla. Quaerat ipsa illo ex tenetur aperiam possimus amet corrupti. Necessitatibus sit explicabo, exercitationem a consequatur neque maiores!</p>
-          <a href="#" class="btn">
-            ver <i class="fas fa-chevron-right"></i>
-          </a>
-      </div>
-    </section>
-
-    <!-- Home cards 2 -->
-			<!-- <section class="home-cards">
-				<div>
-					<img src="https://i.ibb.co/zVqhWn2/card5.png" alt="" />
-					<h3>Microsoft Teams</h3>
-					<p>
-						Unleash the power of your team.
-					</p>
-					<a href="#">Shop Now <i class="fas fa-chevron-right"></i></a>
-				</div>
-				<div>
-					<img src="https://i.ibb.co/mGZcxcn/card6.jpg" alt="" />
-					<h3>Unlock the power of learning</h3>
-					<p>
-						Get students future-ready with Windows 10 devices. Starting at $219.
-					</p>
-					<a href="#">Shop Now <i class="fas fa-chevron-right"></i></a>
-				</div>
-				<div>
-					<img src="https://i.ibb.co/NpPvVHj/card7.png" alt="" />
-					<h3>Windows 10 Enterprise</h3>
-					<p>
-						Download the free 90-day evaluation for IT professionals.
-					</p>
-					<a href="#">Download Now <i class="fas fa-chevron-right"></i></a>
-				</div>
-				<div>
-					<img src="https://i.ibb.co/LkP4L5T/card8.png" alt="" />
-					<h3>Explore Kubernetes</h3>
-					<p>
-						Learn how Kubernetes works and get started with cloud native app
-						development today.
-					</p>
-					<a href="#">Get Started <i class="fas fa-chevron-right"></i></a>
-				</div>
-      </section> -->
-
-      <!-- Carbon -->
-      <!-- <section class="carbon dark">
-        <div class="content">
-          <h2>Commiting To Carbon Negative</h2>
-          <p>Microsoft will be carbon negative by 2030 and by 2050 we will remove
-            all carbon the company has emitted since it was founded in 1975</p>
-            <a href="#" class="btn">
-              Learn More <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
-      </section> -->
-
-      <!-- Follow -->
-      <section class="follow">
-        <p>Follow Autochupas</p>
-        <a href="https://facebook.com">
-          <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook">
-        </a>
-        <a href="https://twitter.com">
-          <img src="https://i.ibb.co/vJvbLwm/social-twitter.png" alt="Twitter">
-        </a>
-        <a href="https://linkedin.com">
-          <img src="https://i.ibb.co/b30HMhR/social-linkedin.png" alt="Linkedin">
-        </a>
-      </section>
-    </div>
-      <!-- Links -->
-      <section class="links">
-        <div class="links-inner">
-          <ul>
-            <li><h3>What's New</h3></li>
-            <li><a href="#">Surface Pro X</a></li>
-            <li><a href="#">Surface Laptop 3</a></li>
-            <li><a href="#">Surface Pro 7</a></li>
-            <li><a href="#">Windows 10 apps</a></li>
-            <li><a href="#">Office apps</a></li>
-          </ul>
-          <ul>
-            <li><h3>Autochupas</h3></li>
-            <li><a href="#">Account Profile</a></li>
-            <li><a href="#">Download Center</a></li>
-            <li><a href="#">Microsoft Store support</a></li>
-            <li><a href="#">Returns</a></li>
-            <li><a href="#">Older tracking</a></li>
-          </ul>
-          <ul>
-            <li><h3>Education</h3></li>
-            <li><a href="#">Microsfot in education</a></li>
-            <li><a href="#">Office for students</a></li>
-            <li><a href="#">Office 365 for schools</a></li>
-            <li><a href="#">Deals for studentss</a></li>
-            <li><a href="#">Microsfot Azure</a></li>
-          </ul>
-          <ul>
-            <li><h3>Enterprise</h3></li>
-            <li><a href="#">Azure</a></li>
-            <li><a href="#">AppSource</a></li>
-            <li><a href="#">Automotive</a></li>
-            <li><a href="#">Government</a></li>
-            <li><a href="#">Healthcare</a></li>
-          </ul>
-          <ul>
-            <li><h3>Developer</h3></li>
-            <li><a href="#">Visual Studio</a></li>
-            <li><a href="#">Windowszs Dev Center</a></li>
-            <li><a href="#">Developer Network</a></li>
-            <li><a href="#">TechNet</a></li>
-            <li><a href="#">Microsoft Developer</a></li>
-          </ul>
-          <ul>
-            <li><h3>Company</h3></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">About Microsoft</a></li>
-            <li><a href="#">Company news</a></li>
-            <li><a href="#">Privacy at Microsoft</a></li>
-            <li><a href="#">Inverstors</a></li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-inner">
-          <div><i class="fas fa-globe fa-2x"></i> English (United States)</div>
-          <ul>
-            <li><a href="#">Sitemap</a></li>
-					<li><a href="#">Contact Microsoft</a></li>
-					<li><a href="#">Privacy & cookies</a></li>
-					<li><a href="#">Terms of use</a></li>
-					<li><a href="#">Trademarks</a></li>
-					<li><a href="#">Safety & eco</a></li>
-					<li><a href="#">About our ads</a></li>
-					<li><a href="#">&copy; Microsoft 2020</a></li>
-          </ul>
-        </div>
-      </footer>
-    </body>
+        <!-- ************************************** -->
+        <!-- ******** Opciones respuesta 3 ******** -->
+        <tr>
+          <td>3</td>
+          <td>21/03/2024</td>
+          <td>1:00 PM</td>
+          <td><select class="form-control">
+              <!-- <option>Realizada</option>
+              <option>En espera</option> -->
+              <option>Cancelada</option>
+            </select></td>
+          <td>Mauricio Roca</td>
+          <td>RT-7854-R</td>
+        </tr>
+        <!-- ************************************** -->
+      </tbody>
+    </table>
+  </div>
+  <!-- ********************************************************************* -->
+</body>
+</html>

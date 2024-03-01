@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
-
-<body class="si">
-
+<body>
     <!-- ********************************************************************* -->
-    <!-- ******************************* Menu ******************************** -->
+    <!-- ****************************** Navbar ******************************* -->
     <nav>
         <a href="home">Inicio</a>
         <a href="inventario">Inventario</a>
@@ -24,6 +20,14 @@
     <!-- ********************************************************************* -->
 
     <!-- ********************************************************************* -->
+    <!-- ***************************** Buscador ****************************** -->
+    <div class="search1">
+        <input type="text" placeholder="Search...">
+        <div class="search"></div>
+      </div>
+      <!-- ********************************************************************* -->
+
+    <!-- ********************************************************************* -->
     <!-- ******************************* Crud ******************************** -->
     <div class="container">
         <div class="table-wrapper">
@@ -31,15 +35,18 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2>Proveedores</h2>
+                        <h2>Inventario</h2>
                     </div>
                     <!-- ****************************** Botones ****************************** -->
                     <div class="col-sm-6">
                         <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
-                            <span>Añadir proveedor</span>
+                            <span>Añadir producto</span>
+                        </a>
+                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
+                            <span>Actualizar inventario</span>
                         </a>
                         <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
-                            <span>Eliminar proveedor</span>
+                            <span>Eliminar producto</span>
                         </a>
                     </div>
                 </div>
@@ -53,18 +60,17 @@
                         <!-- ******** -->
                         <!-- checkbox -->
                         <th>
-                            <span class="custom-checkbox"><input type="checkbox" id="selectAll"><label
-                                    for="selectAll"></label></span>
+                            <span class="custom-checkbox"></span>
                         </th>
                         <!-- ******** -->
 
                         <!-- ********* -->
                         <!-- Apartados -->
-                        <th>Empresa</th>
-                        <th>Email</th>
-                        <th>Direccion</th>
-                        <th>Telefono</th>
-                        <th>Accion</th>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Proveedor</th>
+                        <th>Existencia</th>
                         <!-- ********* -->
                     </tr>
                 </thead>
@@ -78,54 +84,54 @@
                         <td><span class="custom-checkbox"><input type="checkbox" id="checkbox1" name="options[]"
                                     value="1"><label for="checkbox1"></label></span></td>
 
-                        <td>Ford</td>
-                        <td>fordempagmail.com</td>
-                        <td>89 Chiaroscuro Rd, Portland, USA</td>
-                        <td>(171) 555-2222</td>
-                        <td class="act">Actualizar</td>
+                        <td>TIMHC106F</td>
+                        <td>TOLVA INF MOTOR CIVIC</td>
+                        <td>TOLVA INF MOTOR CIVIC 06-11 2/ 4P/ ACURA CSX 06-07 SEC DEL</td>
+                        <td>ACURA</td>
+                        <td class="act">2</td>
                     </tr>
                     <!-- ********************************************************************* -->
                     <tr>
                         <td><span class="custom-checkbox"><input type="checkbox" id="checkbox2" name="options[]"
                                     value="1"><label for="checkbox2"></label></span></td>
 
-                        <td>Mazda</td>
-                        <td>mazdav7gmail.com</td>
-                        <td>Obere Str. 57, Berlin, Germany</td>
-                        <td>(313) 555-5735</td>
-                        <td class="act">Actualizar</td>
+                        <td>11-1784-01</td>
+                        <td>CALAVERA VOYAGER</td>
+                        <td>CALAVERA VOYAGER/CARAVAN 84-90 S/ARNES T DER</td>
+                        <td>DODGE</td>
+                        <td class="act">8</td>
                     </tr>
                     <!-- ********************************************************************* -->
                     <tr>
                         <td><span class="custom-checkbox"><input type="checkbox" id="checkbox3" name="options[]"
                                     value="1"><label for="checkbox3"></label></span></td>
 
-                        <td>Nissan</td>
-                        <td>nissanu8gmail.com</td>
-                        <td>25, rue Lauriston, Paris, France</td>
-                        <td>(503) 555-9931</td>
-                        <td class="act">Actualizar</td>
+                        <td>CDVO84</td>
+                        <td>COFRE COYAGER</td>
+                        <td>COFRE COYAGER / CARAVAN 84-90</td>
+                        <td>DODGE</td>
+                        <td class="act">9</td>
                     </tr>
                     <!-- ********************************************************************* -->
                     <tr>
                         <td><span class="custom-checkbox"><input type="checkbox" id="checkbox4" name="options[]"
                                     value="1"><label for="checkbox4"></label></span></td>
 
-                        <td>Renault</td>
-                        <td>renaultf4gmail.com</td>
-                        <td>C/ Araquil, 67, Madrid, Spain</td>
-                        <td>(204) 619-5731</td>
-                        <td class="act">Actualizar</td>
+                        <td>333-1512R</td>
+                        <td>CUARTO PUNTA VOYAGER</td>
+                        <td>CUARTO PUNTA VOYAGER / CARAVAN 84-86 AMBAR D4 DER</td>
+                        <td>DODGE</td>
+                        <td class="act">2</td>
                     </tr>
                     <!-- ********************************************************************* -->
                     <tr>
                         <td><span class="custom-checkbox"><input type="checkbox" id="checkbox5" name="options[]"
                                     value="1"><label for="checkbox5"></label></span></td>
-                        <td>Volkswagen</td>
-                        <td>volkswagengmail.com</td>
-                        <td>Via Monte Bianco 34, Turin, Italy</td>
-                        <td>(480) 631-2097</td>
-                        <td class="act">Actualizar</td>
+                        <td>ELDVO84CL</td>
+                        <td>ESPEJO LAT VOYAGER</td>
+                        <td>ESPEJO LAT VOYAGER / CARAVAN 84-90 C/CONT MAN IZQ</td>
+                        <td>DODGE</td>
+                        <td class="act">22</td>
                     </tr>
                     <!-- ********************************************************************* -->
                 </tbody>
@@ -134,5 +140,4 @@
         </div>
     </div>
 </body>
-
 </html>
