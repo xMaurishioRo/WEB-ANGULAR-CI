@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule, } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 interface Productos {
   producto_id: number;
   nombre: string;
@@ -11,13 +12,18 @@ interface Productos {
 @Component({
   selector: 'app-inventario',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './inventario.component.html',
   styleUrl: './inventario.component.css'
 })
 export class InventarioComponent implements OnInit {
   cadenaDeBusqueda: string = '';
   productos: Productos[] = [];
+  mostrarVentanaEmergente = false;
+  precio_unitario: number = 0;
+  stock: number = 0;
+nombre: string = '';
+descripcion: string = '';
   constructor(private http: HttpClient) {}
   ngOnInit(): void {
     this.obtenerInventario();
@@ -54,5 +60,40 @@ export class InventarioComponent implements OnInit {
     }
 
     return resultadoFiltrado;
+  }
+  
+
+  mostrarVentana() {
+    this.mostrarVentanaEmergente = true;
+  }
+
+  cerrarVentana() {
+    this.mostrarVentanaEmergente = false;
+    // Limpiar los campos del formulario
+    this.nombre = '';
+    this.descripcion = '';
+    this.precio_unitario = 0;
+    this.stock = 0;
+  }
+  guardarProducto() {
+    const producto = {
+      nombre: this.nombre,
+      descripcion: this.descripcion,
+      precio_unitario: this.precio_unitario,
+      stock: this.stock
+    };
+  
+    // Realizar la solicitud HTTP POST
+    this.http.post('https://deploy-7ohq.onrender.com/productos', producto).subscribe(
+      (response: any) => {
+        console.log('Producto insertado correctamente:', response);
+        // Luego de guardar, cierra la ventana emergente
+        this.cerrarVentana();
+      },
+      (error) => {
+        console.error('Error al insertar producto:', error);
+        // Manejo de errores
+      }
+    );
   }
 }
