@@ -1,199 +1,193 @@
-<div>
-  <h1>Hola mi primer proyecto</h1>
-  <h2> {{ welcome }} </h2>
-  <ul>
-    @for (task of tasks(); track task) {
-    <li>
-      {{ task }}
-    </li>
-    }
-  </ul>
-  <hr />
+<!-- 
+Responsive HTML Table With Pure CSS - Web Design/UI Design
 
-  <h2>{{'Hola'.repeat(4)}}</h2>
-  <p> la suma es 3 + 3 es {{3 + 3}} </p>
-  <p>Hola soy {{ name() }} y mi edad es {{ age }}</p>
+Code written by:
+👨🏻‍⚕️ Coding Design (Jeet Saru)
 
-  <hr />
+> You can do whatever you want with the code. However if you love my content, you can **SUBSCRIBED** my YouTube Channel.
 
-  <img [src]="person().avatar" alt="">
-  <input type="number" [value]="person().age">
-  <button [disabled]="disabled">Click me</button>
-  <p>person: {{ person.name }}</p>
-
-  <hr />
-
-  <button (click)="clickHandler()"> Click me </button>
-  <hr>
-  <button (dblclick)="clickHandler()"> double me </button>
-  <p>(change)</p>
-  <input type="number" [value]="person()  .age" (change)="changeHandler($event)">
-  <p>(change)</p>
-  <input type="text" [value]="person.name" (change)="changeHandler($event)">
-  <p>(keydown)</p>
-  <input type="text" [value]="person.name" (keydown)="keydownHandler($event)">
-  <p>(keydown shift)</p>
-  <input type="text" [value]="person.name" (keydown.shift.t)="clickHandler()">
-
-  <hr />
-
-  <h1>signals</h1>
-  <input type="text" [value]="name()" (change)="changeHandler($event)">
-  <p>name: {{ name() }}</p>
-  <p>name: {{ name() }}</p>
-
-  <hr />
-
-  <ul>
-    <p>total: {{ tasks().length }}</p>
-    @for (task of tasks(); track task; let i = $index) {
-    <li>
-      {{ i }} {{ task }}
-    </li>
-    }
-  </ul>
-
-  <hr />
-
-  @if (1 !== 1) {
-  <div>
-    My contend
-  </div>
-  }
-
-  @if (name() === 'arath') {
-  <div>
-    Soy arath
-  </div>
-  }
-
-  @if (name() === 'arath') {
-  <div>Soy Arath</div>
-  }
-
-  <input type="number" [value]="person().age" (change)="changeAge($event)">
-  @if (person().name === 'arath' && person().age > 18) {
-  <div>
-    Soy arath y soy mayor de 18
-  </div>
-  } @else {
-  soy arath y soy menor de 18
-  }
-  <h2>if else new </h2>
-  @if (person().name === 'arath' && person().age > 18) {
-  <strong>Soy arath y soy mayor de 18</strong>
-  } @else {
-  <i> Soy arath y soy menor de 18 </i>
-  }
-
-  <hr />
-  <input type="text" [value]="person().name" (change)="changeName($event)">
-  <div>
-    @switch (person().name) {
-    @case ('arath') {
-    <p>yo soy arath</p>
-    }
-    @case ('mau') {
-    <p>yo soy mau</p>
-    }
-    @case ('anty') {
-    <p>yo soy anty</p>
-    }
-    @case ('obrian') {
-    <p>yo soy obrian</p>
-    }
-    @default {
-    <p>yo no soy nadie </p>
-    }
-    }
-  </div>
-
-  <hr />
-  <input type="color" [formControl]="colorCtrl">
-  <p>color: {{ colorCtrl.value }}</p>
-
-  <svg>
-    <g>
-      <rect x="0" y="0" height="100" width="100" [attr.fill]="colorCtrl.value" />
-    </g>
-  </svg>
-  <hr />
-  <input type="number" [formControl]="widthCrtl">
-  <span class="box" [style.width.px]="widthCrtl.value"></span>
-  <hr />
-  <p>
-    <input type="text" [formControl]="nameCtrl"> <br />
-    <span class="message-error" [class.show]="nameCtrl.invalid && nameCtrl.touched">Nombre invalido</span>
-  </p>
-  <p>
-    <input type="text">
-  </p>
-
-  <hr>
-
-  <h2>New for</h2>
-
-  <h2>anterior angular</h2>
-  <ul>
-    <p>total: {{ tasks().length }}</p>
-    @for (task of tasks(); track task; let i = $index) {
-    <li>
-      {{ i }} {{ task }}
-    </li>
-    }
-  </ul>
-
-  <h2>Nuevaangular</h2>
-  <ul>
-    @for ( task of tasks(); track task; let i = $index) {
-    <li>{{ i }} {{ task }}</li>
-    } @empty {
-    <li><strong> la lista esta en vacio </strong></li>
-    }
-  </ul>
-
-  <h2> New Switch </h2>
-  <div>
-    @switch (person().name) {
-    @case ('arath') {
-    <p>yo soy arath</p>
-    }
-    @case ('mau') {
-    <p>yo soy mau</p>
-    }
-    @case ('anty') {
-    <p>yo soy anty</p>
-    }
-    @case ('obrian') {
-    <p>yo soy obrian</p>
-    }
-    @default {
-    <p>yo no soy nadie </p>
-    }
-    }
-  </div>
-
-
-  <div>
-    @switch (person().name) {
-    @case ('arath') {
-    <p>Soy arath </p>
-    }
-    @case ('mau') {
-    <p>Soy mau </p>
-    }
-    @case ('anty') {
-    <p>Soy anty </p>
-    }
-    @case ('obrian') {
-    <p>Soy obrian </p>
-    }
-    @default {
-    <p> yo no soy nadie </p>
-    }
-    }
-  </div>
-
-
-
-</div>
+🌎link: www.youtube.com/codingdesign 
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Convert | Export html Table to CSV & EXCEL File</title>
+     <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+ </head>
+ 
+ <body>
+     <main class="table" id="customers_table">
+         <section class="table__header">
+             <h1 style="color: #fff">Citas's Orders</h1>
+             <div class="input-group">
+                 <input type="search" placeholder="Search Data...">
+                 <img src="../images/search.png" alt="">
+             </div>
+             <div class="export__file">
+                 <label for="export-file" class="export__file-btn" title="Export File"></label>
+                 <input type="checkbox" id="export-file">
+                 <div class="export__file-options">
+                     <label>Export As &nbsp; &#10140;</label>
+                     <label for="export-file" id="toPDF">PDF <img src="../images/pdf.png" alt=""></label>
+                     <label for="export-file" id="toJSON">JSON <img src="../images/json.png" alt=""></label>
+                     <label for="export-file" id="toCSV">CSV <img src="../images/csv.png" alt=""></label>
+                     <label for="export-file" id="toEXCEL">EXCEL <img src="../images/excel.png" alt=""></label>
+                 </div>
+             </div>
+         </section>
+         <section class="table__body">
+             <table>
+                 <thead>
+                     <tr>
+                         <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> User <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> Descripcion <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> Estado <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> Fecha <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> Accion <span class="icon-arrow">&UpArrow;</span></th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                         <td> 1 </td>
+                         <td> <img src="../images/Zinzu Chan Lee.jpg" alt="">Zinzu Chan Lee</td>
+                         <td> Seoul </td>
+                         <td> 17 Dec, 2022 </td>
+                         <td>
+                             <p class="status delivered">Delivered</p>
+                         </td>
+                         <td> <strong> $128.90 </strong></td>
+                     </tr>
+                     <tr>
+                         <td> 2 </td>
+                         <td><img src="../images/Jeet Saru.png" alt=""> Jeet Saru </td>
+                         <td> Kathmandu </td>
+                         <td> 27 Aug, 2023 </td>
+                         <td>
+                             <p class="status cancelled">Cancelled</p>
+                         </td>
+                         <td> <strong>$5350.50</strong> </td>
+                     </tr>
+                     <tr>
+                         <td> 3</td>
+                         <td><img src="../images/Sonal Gharti.jpg" alt=""> Sonal Gharti </td>
+                         <td> Tokyo </td>
+                         <td> 14 Mar, 2023 </td>
+                         <td>
+                             <p class="status shipped">Shipped</p>
+                         </td>
+                         <td> <strong>$210.40</strong> </td>
+                     </tr>
+                     <tr>
+                         <td> 4</td>
+                         <td><img src="../images/Alson GC.jpg" alt=""> Alson GC </td>
+                         <td> New Delhi </td>
+                         <td> 25 May, 2023 </td>
+                         <td>
+                             <p class="status delivered">Delivered</p>
+                         </td>
+                         <td> <strong>$149.70</strong> </td>
+                     </tr>
+                     <tr>
+                         <td> 5</td>
+                         <td><img src="../images/Sarita Limbu.jpg" alt=""> Sarita Limbu </td>
+                         <td> Paris </td>
+                         <td> 23 Apr, 2023 </td>
+                         <td>
+                             <p class="status pending">Pending</p>
+                         </td>
+                         <td> <strong>$399.99</strong> </td>
+                     </tr>
+                     <tr>
+                         <td> 6</td>
+                         <td><img src="../images/Alex Gonley.jpg" alt=""> Alex Gonley </td>
+                         <td> London </td>
+                         <td> 23 Apr, 2023 </td>
+                         <td>
+                             <p class="status cancelled">Cancelled</p>
+                         </td>
+                         <td> <strong>$399.99</strong> </td>
+                     </tr>
+                     <tr>
+                         <td> 7</td>
+                         <td><img src="../images/Alson GC.jpg" alt=""> Jeet Saru </td>
+                         <td> New York </td>
+                         <td> 20 May, 2023 </td>
+                         <td>
+                             <p class="status delivered">Delivered</p>
+                         </td>
+                         <td> <strong>$399.99</strong> </td>
+                     </tr>
+                     <tr>
+                         <td> 8</td>
+                         <td><img src="../images/Sarita Limbu.jpg" alt=""> Aayat Ali Khan </td>
+                         <td> Islamabad </td>
+                         <td> 30 Feb, 2023 </td>
+                         <td>
+                             <p class="status pending">Pending</p>
+                         </td>
+                         <td> <strong>$149.70</strong> </td>
+                     </tr>
+                     <tr>
+                         <td> 9</td>
+                         <td><img src="../images/Alex Gonley.jpg" alt=""> Alson GC </td>
+                         <td> Dhaka </td>
+                         <td> 22 Dec, 2023 </td>
+                         <td>
+                             <p class="status cancelled">Cancelled</p>
+                         </td>
+                         <td> <strong>$249.99</strong> </td>
+                     </tr>
+                     <tr>
+                         <td> 9</td>
+                         <td><img src="../images/Alex Gonley.jpg" alt=""> Alson GC </td>
+                         <td> Dhaka </td>
+                         <td> 22 Dec, 2023 </td>
+                         <td>
+                             <p class="status cancelled">Cancelled</p>
+                         </td>
+                         <td> <strong>$249.99</strong> </td>
+                     </tr>
+                     <tr>
+                         <td> 9</td>
+                         <td><img src="../images/Alex Gonley.jpg" alt=""> Alson GC </td>
+                         <td> Dhaka </td>
+                         <td> 22 Dec, 2023 </td>
+                         <td>
+                             <p class="status cancelled">Cancelled</p>
+                         </td>
+                         <td> <strong>$249.99</strong> </td>
+                     </tr>
+                     <tr>
+                         <td> 9</td>
+                         <td><img src="../images/Alex Gonley.jpg" alt=""> Alson GC </td>
+                         <td> Dhaka </td>
+                         <td> 22 Dec, 2023 </td>
+                         <td>
+                             <p class="status cancelled">Cancelled</p>
+                         </td>
+                         <td> <strong>$249.99</strong> </td>
+                     </tr>
+                     <tr>
+                         <td> 9</td>
+                         <td><img src="../images/Alex Gonley.jpg" alt=""> Alson GC </td>
+                         <td> Dhaka </td>
+                         <td> 22 Dec, 2023 </td>
+                         <td>
+                             <p class="status cancelled">Cancelled</p>
+                         </td>
+                         <td> <strong>$249.99</strong> </td>
+                     </tr>
+                 </tbody>
+             </table>
+         </section>
+     </main>
+     <!-- <script src="script.js"></script> -->
+ 
+ </body>
+ 
+ </html>

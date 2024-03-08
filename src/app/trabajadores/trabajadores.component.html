@@ -1,95 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!-- <!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Citas de Vehículos</title>
+    <link rel="stylesheet" href="homepage.component.css">
 </head>
-
 <body>
-  <nav>
-    <a class="u" href="home">home</a>
-    <a class="u" href="servicess">services</a>
-    <a class="u" href="pro">Provedores</a>
-    <a class="u" href="agenda">Agendas</a>
-    <a class="u" href="tra">trabajadores</a>
-    <a class="u" href="buscar">tareas</a>
-  </nav>
-  <link href="https://nagoshiashumari.github.io/Rpg-Awesome/stylesheets/rpg-awesome.min.css" rel="stylesheet">
-  <div class="rpg grande beth">
-    <div class="botones" style="float:right">
-      <div class="bot"></div>
-      <div class="bot"></div>
-      <div class="bot"></div>
-      <div class="bot"></div>
-    </div><br>
-    <div class="imaf1avam" style="background-image: url(http://via.placeholder.com/100x100);"></div><br>
-    <div class="nf2avam">Bethany V. Schmitt<br></div>
-    <div class="df2avam">20 años // Jano // 7 años de servicio // Pícaro // Nivel 1</div><br><br>
-    <H1>información</H1>
-    <!-- <div class="caja vida" style="width: auto;"><i class="ra ra-health"><span class="stat">Especialidad</span></i><span class="puntos">♦♦♦♦♦♦♦♦♦♦♦♦</span><br></div>
-  <div class="caja pc"><i class="ra ra-crossed-swords"><span class="stat">Status</span></i><span class="puntos">♦♦♦♦</span></div>
-  <div class="caja pr"><i class="ra ra-broken-shield"><span class="stat">Horas laborales</span></i><span class="puntos">♦♦♦</span></div><br>
-  <div class="caja pe"><i class="ra ra-splash"><span class="stat">PE</span></i><span class="puntos">♦♦♦♦</span></div>
-  <div class="caja vel"><i class="ra ra-player-dodge"><span class="stat">Vel</span></i><span class="puntos">♦♦♦♦♦</span></div><br><br> -->
-    <div class="exp12">Especialidad</div><br>
-    <div class="caja2">De igualar o superar la velocidad del objetivo de su primer golpe, deben lanzar un dado de acción
-      y, de ser 5 o más, toman al oponente desprevenido al acercarse rápido y sigilosos, antes que pueda reaccionar.
-      Esto les suma +50% al resultado de de su ataque. <br><br>De tener ventaja en velocidad, sus golpes con dagas
-      cuentan como dos golpes para el conteo de reducción de PR pues golpean con velocidad y precisión y agotan las
-      defensas de sus oponentes. Con esto, un golpe de 50% o 100% quita 1 PR y un golpe de 150% (crítico) quita 2 PR.
-      <br><br>Para monstruos con PR, pueden reducírselo igualando su velocidad pero solo cuentan sus golpes críticos de
-      acuerdo a la siguiente regla:<br><br>Bestiario intermedio: 1 Critico baja 1 PR.<br>Bestiario avanzado: &nbsp;2
-      Críticos bajan 1 PR.</div><br><br>
-    <div class="exp12">Tareas</div><br>
-    <div class="subfr">Reparar</div>
-    <div class="caja2" style="max-height:120px;">— Son capaces de trabar y destrabar puertas de forma mágica siempre y
-      cuando la misma no tenga algún tipo de mecanismo mágico, manual o similar que no sea conocido por semidiós. <br>—
-      Al encontrarse en una encrucijada, siempre tendrán una corazonada sobre qué espera en cada camino, pese a eso,
-      pocas veces consiguen entenderlas. <br>— Los peligros del viaje disminuyen, pues toman las mejores
-      decisiones.<br>— Al tener que lanzar dado de Acción como consecuencia de haber tomado una decisión entre varias
-      opciones, ganan un +2 en esa tirada, pues, toman la mejor decisión posible en el momento.</div><br>
-    <div class="subfr">Section</div>
-    <div class="caja2">— <strong>Confusión</strong>: Mantener los principios y los finales como un continuo, así como la
-      idea de que siempre existen decisiones difíciles que tomar y pueden mantenernos por días, Jano tiene maestría en
-      esto, sus hijos en este punto aún no tanto, pero saben cómo confundir a sus adversarios, narrativamente se debe
-      plantear algo con la expresa intención de confundir y lanzar el dado de espíritu el cual no solo reduce el dado de
-      ataque sino que tiene la potencia de lograr que el oponente se dañe a sí mismo con su propio dado en caso de que
-      el dado del hijo de Jano sea 150% o 200%. <br>— <strong>Presentimiento</strong>: Siendo capaces de percibir ambos
-      lados de todo algunas veces son capaces de adelantarse a los sucesos, como extra, de deberse tomar una decisión
-      lanzando dado de denario puede decidir 1 vez por tema simplemente la opción que más le convenga. <br><br>—
-      <strong>Veritas</strong>: Es capaz de deducir la mentira en medio de la información, cuando alguien les miente no
-      pueden sacarse ese molesto presentimiento de que las cosas no calzan bien. Si el dado de espíritu da menos de 100%
-      no podrá forzar a su contrincante a decir la verdad, al sacar 150% o 200% dirá absolutamente todo con lujo de
-      detalles y color de calzones. <br>— &nbsp;<strong>Persuasión |</strong>: Si alguien más crees que eres quien tiene
-      las respuestas a los enigmas es mucho más sencillo hacer que se dobleguen a tu voluntad ¿no? No se trata del
-      embrujhabla de los hijos de Venus, pero por un momento sus contrincantes pensarán que esto es lo que está pasando
-      hasta que son atacados. </div><br><br>
-    <div class="exp12">Inventario</div><br>
-    <div class="caja2 inv">
-      <!-- <div class="item"><strong>Bolsa encantada</strong> <br>+7 al Inventario</div> -->
-      <!-- <div class="item"><strong>Balteus mágico</strong> <br>+1 al Inventario</div> -->
-      <div class="item"><strong></strong> <br>
-        <div class="usos"></div>
-      </div>
-      <div class="item"><strong></strong> <br>
-        <div class="usos"><a href="#"></a></div>
-      </div>
-      <div class="item"><strong> </strong><br>
-        <div class="usos"><a href="#"></a></div>
-      </div>
-      <div class="item"><strong></strong><br></div>
-      <div class="item"><strong></strong><br></div>
-      <div class="item"><strong></strong><br></div>
-      <div class="item"><strong></strong><br></div>
-      <div class="item"><strong></strong><br></div>
-      <div class="item"><strong></strong><br></div>
-      <div class="item"><strong></strong><br></div>
-      <div class="item"><strong></strong><br></div>
+  
+  
+
+  
+  
+    <div class="container" *ngIf="citasAutos.length > 0">
+        <h2>Citas Pendientes</h2>
+        <div class="filtro">
+            <button class="filtro-btn" (click)="cambiarEstadoFiltro('all')">Todas</button>
+            <button class="filtro-btn" (click)="cambiarEstadoFiltro('On-Hold')">On-Hold</button>
+            <button class="filtro-btn" (click)="cambiarEstadoFiltro('Processing')">Processing</button>
+            <button class="filtro-btn" (click)="cambiarEstadoFiltro('Completed')">Completed</button>
+            <button class="filtro-btn" (click)="cambiarEstadoFiltro('Cancelled')">Cancelled</button>
+          </div>
+        <table class="table">
+          
+          
+            <thead>
+                <tr>
+                    <th></th>
+                  <th>USUARIO</th>
+                  <th>FECHA</th>
+                  <th>ESTADO</th>
+                  <th>PLACAS</th>
+                  <th>DESCRIPCION</th>
+                
+                </tr>
+              </thead>
+          
+            <tbody>
+                <tr *ngFor="let citaAuto of citasFiltradas" [attr.data-estado]="citaAuto.status">>
+                    <td>{{ citaAuto.nombreUsuario }}</td>
+                    <td>{{ citaAuto.fecha_hora | date:'yyyy-MM-dd' }}</td>
+                    <td class="estado-cita">{{ citaAuto.status }}</td>
+                    <td>{{ citaAuto.placa }}</td>
+                    <td>{{ citaAuto.descripcion }}</td>
+                    <td>
+                        <div *ngIf="citaAuto.loading" class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Cargando...</span>
+                        </div>
+                        <ng-container *ngIf="citaAuto.status === 'On-Hold' && !citaAuto.loading">
+                            <button class="btn-accion-confirmar" (click)="actualizarEstadoCita(citaAuto.auto_id, 'Processing')">
+                                <span style="color: green;">&#10004;</span>
+                            </button>
+                            <button class="btn-accion-rechazar" (click)="actualizarEstadoCita(citaAuto.auto_id, 'Cancelled')">
+                                <span style="color: red;">&#10008;</span>
+                            </button>
+                        </ng-container>
+                        <div *ngIf="citaAuto.status === 'Processing' && !citaAuto.loading">
+                            <button class="btn-accion-completed" (click)="actualizarEstadoCita(citaAuto.auto_id, 'Completed')">Completar</button>
+                        </div>
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
     </div>
-  </div>
-
+  
 </body>
-
-</html>
+</html> -->

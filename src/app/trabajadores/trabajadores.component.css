@@ -1,313 +1,206 @@
 body {
-  background: rgba(0, 0, 0, 0.79);
-}
-
-.rpg.beth .nf2avam,
-.rpg.beth .exp12 {
-  border-color: #6f2727;
-}
-
-.rpg.beth .caja .ra,
-.rpg.beth .caja2::-webkit-scrollbar-thumb {
-  background: #6f2727;
-}
-
-.rpg.grande.beth .subfr,
-.rpg.grande.beth .item strong,
-.rpg.grande.beth .item a {
-  color: #9a3c3c;
-}
-
-.rpg.grande {
-  outline-offset: -20px;
-  width: 100%;
-}
-
-.rpg .botones {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.rpg .botones .bot {
-  background: red;
-  width: 15px;
-  height: 10px;
-  flex: 1 0 auto;
-  margin: 2px;
-}
-
-.imaf1avam {
-  border: 6px solid #2c2c2c;
-  border-radius: 100px;
-  height: 100px;
-  margin: auto auto 20px;
-  width: 100px;
-}
-
-.rpg .df2avam {
-  font-size: 8px;
-}
-
-.rpg .caja {
-  height: auto;
-  font-size: 11px;
-  background: #00000078;
-  border: 1px solid #111;
-  color: #ccc;
-  font-family: calibri;
-  letter-spacing: 1px;
-  line-height: 8px;
-  margin: 2px;
-  text-transform: uppercase;
-}
-
-.rpg.grande .caja.pc,
-.rpg.grande .caja.pr,
-.rpg.grande .caja.pe,
-.rpg.grande .caja.vel {
-  display: inline-block;
-  width: calc(50% - 6px);
-}
-
-.rpg .caja .ra {
-  width: 20px;
-  display: inline-block;
-  background: #09625d;
-  padding: 5px 7px;
-  font-size: 10px;
-  text-align: center;
-}
-
-.ra-broken-shield:before,
-.ra-capitol:before {
-  margin-left: 1px;
-}
-
-.rpg .stat {
-  display: block;
-  font-family: calibri;
-  margin-top: 1px;
-}
-
-.caja .puntos {
-  display: inline-block;
-  width: calc(100% - 35px);
-  margin: auto;
-  text-align: center;
-  vertical-align: top;
-  padding-top: 12px;
-}
-
-.rpg .puntos {
-  letter-spacing: 3px;
-  font-size: 12px;
-}
-
-.rpg .exp12 {
-  font-size: 9px;
-  padding: 3px 0;
-  border-bottom: 1px solid #09625d;
+  background-color: #000;
   color: #fff;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-}
-
-.subfr {
-  color: #09625d;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.caja2 {
-  max-height: 165px;
-  overflow: auto;
-  padding-right: 4px;
-}
-
-.rpg .inv {
-  padding: 0px;
-  width: auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.rpg .item {
-  background: #00000078;
-  border: 1px solid #1d1d1d;
-  color: #ccc;
-  font-family: calibri;
-  font-size: 8px;
-  height: auto;
-  letter-spacing: 0.5px;
-  line-height: 9px;
-  margin: 1px;
-  padding: 12px;
-  text-align: center;
-  text-transform: uppercase;
-  width: 112px;
-  flex: 1 0 auto;
-}
-
-.rpg.grande .item strong {
-  font-size: 9px;
-  letter-spacing: 1px;
-  color: #09625d;
-}
-
-.rpg .item a {
-  font-size: 11px;
-  font-family: helvetica;
-  margin-top: -2px;
-  text-decoration: none;
-}
-
-.rpg .item .usos {
-  float: right;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  letter-spacing: -2px;
-  margin-top: -13px;
-  cursor: default;
-  font-size: 9px;
-  line-height: 8px;
-}
-
-.rpg {
-  background: #000000a6;
-  color: #f1f1f1;
-  font-family: Arial;
-  font-size: 11px;
-  margin: auto;
-  outline: 1px solid #2c2c2c;
-  outline-offset: -15px;
-  padding: 25px;
-  text-align: justify;
-  width: 391px;
-}
-
-.rpg .pj,
-.rpg .op {
-  width: 180px;
-  display: inline-block;
-  padding-right: 15px;
-}
-
-.rpg .op {
-  padding: 0 0 0 15px;
-  border-left: 1px solid #2c2c2c;
-}
-
-.rpg .nf2avam {
-  font-size: 11px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: 900;
-  line-height: 11px;
-  margin: auto;
-  padding: 4px;
-  text-align: center;
-  text-transform: uppercase;
-  width: auto;
-  border-bottom: #09625d solid 1px;
-}
-
-.rpg .df2avam {
-  font-size: 8px;
-  width: auto;
-  margin-bottom: -10px;
-  font-family: calibri;
-  letter-spacing: 1px;
-  line-height: 9px;
-  margin: auto;
-  padding: 4px;
-  text-align: center;
-  text-transform: uppercase;
-  width: 290px;
-}
-
-.rpg .caja {
-  height: auto;
-  font-size: 11px;
-  background: #00000078;
-  border: 1px solid #111;
-  color: #ccc;
-  font-family: calibri;
-  letter-spacing: 1px;
-  line-height: 8px;
-  margin: 2px;
-  text-transform: uppercase;
-}
-
-.rpg .pj .caja .stat,
-.rpg .op .caja .stat {
-  width: 20px;
-  display: inline-block;
-  background: #09625d;
-  padding: 7px 5px;
-  font-size: 10px;
-  text-align: center;
-}
-
-
-
-/* '''''''''''''''''''''''''''''''''''''''''''''''''''''''''' */
-/* Mantén la clase .loo igual */
-.loo {
-  color: #783e3e;
-  margin-left: 20px;
-  margin-top: 10px;
-  width: 100%;
-  font-size: 3rem;
-  font-weight: 0;
-}
-
-.main-nav {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 10px 0;
-}
-
-.main-menu {
-  display: flex;
-  list-style: none;
+  font-family: 'Nunito', sans-serif;
   margin: 0;
-  padding: 0;
-  align-items: center;
-}
-
-.main-menu li {
-  margin-right: 15px;
-}
-
-.main-menu a {
-  text-decoration: none;
-  color: #060505;
-  font-size: 16px;
-}
-
-.main-menu a:hover {
-  border-bottom: 2px solid #ccc;
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
 nav {
-  text-align: right;
-  padding: 30px 50px 0 0;
+  margin: 0 auto;
+  position: relative;
+  width: 590px;
+  height: 50px;
+  background-color: #10182f;
+  border-radius: 8px;
+  font-size: 0;
 }
 
-nav>a {
-  color: #fff;
-  font-weight: 300;
+nav a {
+  line-height: 50px;
+  height: 100%;
+  font-size: 10px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
   text-decoration: none;
-  margin-right: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  cursor: pointer;
 }
 
-/*Decoracion cuando pasamos el mause*/
-nav>a:hover {
-  text-decoration: underline;
+nav .animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  transition: all .5s ease 0s;
+  border-radius: 8px;
 }
 
-/* '''''''''''''''''''''''''''''''''''''''''''''''''''''''''' */
+a:nth-child(1) {
+  width: 100px;
+}
+
+a:nth-child(2) {
+  width: 110px;
+}
+
+a:nth-child(3) {
+  width: 100px;
+}
+
+a:nth-child(4) {
+  width: 160px;
+}
+
+a:nth-child(5) {
+  width: 120px;
+}
+
+nav .start-home,
+a:nth-child(1):hover~.animation {
+  width: 100px;
+  left: 0;
+  background-color: #1abc9c;
+}
+
+nav .start-about,
+a:nth-child(2):hover~.animation {
+  width: 110px;
+  left: 100px;
+  background-color: #e74c3c;
+}
+
+nav .start-blog,
+a:nth-child(3):hover~.animation {
+  width: 100px;
+  left: 210px;
+  background-color: #3498db;
+}
+
+nav .start-portefolio,
+a:nth-child(4):hover~.animation {
+  width: 160px;
+  left: 310px;
+  background-color: #9b59b6;
+}
+
+nav .start-contact,
+a:nth-child(5):hover~.animation {
+  width: 120px;
+  left: 470px;
+  background-color: #e67e22;
+}
+
+.container {
+  margin: 20px auto;
+  margin-top: -100px;
+  width: 80%;
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #757575;
+  color: #ffffff;
+}
+
+.estado-confirmada {
+  color: #5cb85c;
+}
+
+.estado-cancelada {
+  color: #ff5c33;
+}
+
+.estado-en-espera {
+  color: #ffd700;
+}
+
+.filtro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filtro-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.filtro-btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-accion-confirmar,
+.btn-accion-rechazar {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+.btn-accion-completed {
+  background-color: green; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Elimina el borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a mano */
+  transition: background-color 0.3s; /* Efecto de transición */
+}
+
+/* Cambia el cursor a mano cuando pasas sobre el botón */
+.btn-accion-completed:hover {
+  cursor: pointer;
+}
+
+/* Cambia el color de fondo cuando pasas sobre el botón */
+.btn-accion-completed:hover {
+  background-color: darkgreen;
+}
+.btn-accion-confirmar:hover,
+.btn-accion-rechazar:hover {
+  text-shadow: 0 0 3px #fff;
+}
+.btn-accion-confirmar,
+.btn-accion-rechazar {
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    padding: 0; /* Sin espacio interno */
+    cursor: pointer; /* Cambia el cursor a mano */
+}
+
+/* Estilos para la palomita verde */
+.btn-accion-confirmar span {
+    font-size: 20px; /* Tamaño de la palomita */
+}
+
+/* Estilos para la tachita roja */
+.btn-accion-rechazar span {
+    font-size: 20px; /* Tamaño de la tachita */
+}

@@ -1,1 +1,38 @@
-<router-outlet></router-outlet>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <input type="radio" id="radio-1" name="tabs" (change)="showContent(1)" checked>
+            <label class="tab" for="radio-1">Citas<span class="notification" style="color: #000;">{{ cantidadOnHold  }}</span></label>
+            <input type="radio" id="radio-2" name="tabs" (change)="showContent(2)">
+            <label class="tab" for="radio-2">Inventario</label>
+            <input type="radio" id="radio-3" name="tabs" (change)="showContent(3)">
+            <label class="tab" for="radio-3">Nosotros</label>
+            <span class="glider"></span>
+        </div>
+    </div>
+    <div class="tab-content" id="content-1" *ngIf="selectedTab === 1">
+        <!-- Contenido de la pestaña de Citas -->
+        <app-homepage></app-homepage>
+    </div>
+    <div class="tab-content" id="content-2" *ngIf="selectedTab === 2">
+        <!-- Contenido de la pestaña de Inventario -->
+        <app-inventario></app-inventario>
+    </div>
+    <div class="tab-content" id="content-3" *ngIf="selectedTab === 3">
+        <!-- Contenido de la pestaña de Nosotros -->
+        <app-home></app-home>
+    </div>
+
+    <!-- <router-outlet></router-outlet> -->
+</body>
+
+</html>

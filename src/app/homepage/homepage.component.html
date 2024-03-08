@@ -1,107 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="homepage.component.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-
-  <!-- ********************************************************************* -->
-  <!-- ******************************* Menu ******************************** -->
-  <nav>
-    <a href="home">Inicio</a>
-    <a href="inventario">Inventario</a>
-    <a href="pro">Proveedores</a>
-    <a href="tra">Trabajadores</a>
-    <a href="buscar">Nosotros</a>
-    <div class="animation start-home"></div>
-  </nav>
-  <!-- ********************************************************************* -->
-
-  <!-- ********************************************************************* -->
-  <!-- ************************* Citas Pendientes ************************** -->
-  <div class="container">
-    <h2>Citas Pendientes</h2>
-    <!-- ************************************** -->
-    <!-- ************ Opcion Estado *********** -->
-    <form class="navbar-form navbar-left" role="search">
-      <select class="form-control1">
-        <option>Estado</option>
-        <option>Cancelado</option>
-        <option>En espera</option>
-        <option>Realizada</option>
-      </select>
-    </form>
-    <!-- ************************************** -->
-    <table class="table">
-      <!-- ************************************** -->
-      <!-- ************** Opciones ************** -->
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>FECHA</th>
-          <th>HORA</th>
-          <th>ESTADO</th>
-          <th>USUARIO</th>
-          <th>PLACAS</th>
-        </tr>
-      </thead>
-      <!-- ************************************** -->
-      <tbody>
-        <!-- ************************************** -->
-        <!-- ******** Opciones respuesta 1 ******** -->
-        <tr>
-          <td>1</td>
-          <td>19/03/2024</td>
-          <td>3:00 PM</td>
-          <td><select class="form-control">
-              <option>Realizada</option>
-              <!-- <option>En espera</option>
-              <option>Cancelada</option> -->
-            </select></td>
-          <td>Anthony Misael</td>
-          <td>YZ-3054-R</td>
-        </tr>
-        <!-- ************************************** -->
-
-        <!-- ************************************** -->
-        <!-- ******** Opciones respuesta 2 ******** -->
-        <tr>
-          <td>2</td>
-          <td>20/03/2024</td>
-          <td>5:00 PM</td>
-          <td><select class="form-control">
-              <!-- <option>Realizada</option> -->
-              <option>En espera</option>
-              <!-- <option>Cancelada</option> -->
-            </select></td>
-          <td>Balam Cetina</td>
-          <td>JK-6452-L</td>
-        </tr>
-        <!-- ************************************** -->
-
-        <!-- ************************************** -->
-        <!-- ******** Opciones respuesta 3 ******** -->
-        <tr>
-          <td>3</td>
-          <td>21/03/2024</td>
-          <td>1:00 PM</td>
-          <td><select class="form-control">
-              <!-- <option>Realizada</option>
-              <option>En espera</option> -->
-              <option>Cancelada</option>
-            </select></td>
-          <td>Mauricio Roca</td>
-          <td>RT-7854-R</td>
-        </tr>
-        <!-- ************************************** -->
-      </tbody>
-    </table>
-  </div>
-  <!-- ********************************************************************* -->
-</body>
-</html>
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Convert | Export html Table to CSV & EXCEL File</title>
+     <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+ </head>
+ 
+ <body>
+     <main class="table" id="customers_table">
+         <section class="table__header">
+             <h1 style="color: #fff">Citas's Orders</h1>
+             <div class="input-group">
+                <input type="search" style="color: #fff;" placeholder="Buscar..." (input)="actualizarCadenaDeBusqueda($event)">
+                <img src="assets/images/search.png" alt="">
+              </div>
+             <div class="export__file">
+                 <label for="export-file" class="export__file-btn" title="Export File" ></label>
+                 <input type="checkbox" id="export-file" >
+                 <div class="export__file-options">
+                     <label>Filtrer &nbsp; &#10140;</label>
+                     <!-- <label for="export-file" id="toPDF">PDF <img src="../images/pdf.png" alt=""></label>
+                     <label for="export-file" id="toJSON">JSON <img src="../images/json.png" alt=""></label>
+                     <label for="export-file" id="toCSV">CSV <img src="../images/csv.png" alt=""></label>
+                     <label for="export-file" id="toEXCEL">EXCEL <img src="../images/excel.png" alt=""></label> -->
+                     <div class="filtro">
+                        <button class="filtro-btn" (click)="cambiarEstadoFiltro('all')">Todas</button>
+                        <button class="filtro-btn" (click)="cambiarEstadoFiltro('On-Hold')">On-Hold</button>
+                        <button class="filtro-btn" (click)="cambiarEstadoFiltro('Processing')">Processing</button>
+                        <button class="filtro-btn" (click)="cambiarEstadoFiltro('Completed')">Completed</button>
+                        <button class="filtro-btn" (click)="cambiarEstadoFiltro('Cancelled')">Cancelled</button>
+                    </div>
+                 </div>
+             </div>
+         </section>
+         <section class="table__body">
+             <table>
+                 <thead>
+                     <tr>
+                         <!-- <th> Id <span class="icon-arrow">&UpArrow;</span></th> -->
+                         <th> User <span></span></th>
+                         <th> Descripcion <span></span></th>
+                         <th> Estado <span></span></th>
+                         <th> Fecha <span></span></th>
+                         <th> Placas <span></span></th>
+                         <th> Accion <span></span></th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                    <tr *ngFor="let citaAuto of citasFiltradas" [attr.data-estado]="citaAuto.status">
+                        <td>{{ citaAuto.nombreUsuario }}</td>
+                        <td>{{ citaAuto.descripcion }}</td>
+                        <td class="estado-cita">
+                            <p [ngClass]="{
+                                'status': true,
+                                'cancelled': citaAuto.status === 'Cancelled',
+                                'pending': citaAuto.status === 'On-Hold',
+                                'shipped': citaAuto.status === 'Processing',
+                                'delivered': citaAuto.status === 'Completed'
+                            }">{{ citaAuto.status }}</p>
+                        </td>
+                        <td>{{ citaAuto.fecha_hora | date:'yyyy-MM-dd' }}</td>
+                        <td>{{ citaAuto.placa }}</td>
+                        <td>
+                            <div *ngIf="citaAuto.loading" class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Cargando...</span>
+                            </div>
+                            <ng-container *ngIf="citaAuto.status === 'On-Hold' && !citaAuto.loading">
+                                <button class="btn-accion-confirmar" (click)="actualizarEstadoCita(citaAuto.auto_id, 'Processing')">
+                                    <span style="color: green;">&#10004;</span>
+                                </button>
+                                <button class="btn-accion-rechazar" (click)="actualizarEstadoCita(citaAuto.auto_id, 'Cancelled')">
+                                    <span style="color: red;">&#10008;</span>
+                                </button>
+                            </ng-container>
+                            <div *ngIf="citaAuto.status === 'Processing' && !citaAuto.loading">
+                                <button class="btn-accion-completed" (click)="actualizarEstadoCita(citaAuto.auto_id, 'Completed')">Completar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                 </tbody>
+             </table>
+         </section>
+     </main>
+     <!-- <script src="script.js"></script> -->
+ 
+ </body>
+ 
+ </html>
